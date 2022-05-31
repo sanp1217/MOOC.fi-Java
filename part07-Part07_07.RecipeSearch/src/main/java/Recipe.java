@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Recipe {
     private String name;
     private int cookTime;
-    private ArrayList<String> ingredients;
+    private ArrayList<String> ingredients = new ArrayList<>();
     
     //Constructor
     public Recipe(){
