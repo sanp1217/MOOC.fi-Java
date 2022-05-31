@@ -5,6 +5,13 @@ public class Recipe {
     private int cookTime;
     private ArrayList<String> ingredients;
     
+    //Constructor
+    public Recipe(){
+        this.name = "No name";
+        this.cookTime = 0;
+    }
+    
+    //Overloaded
     public Recipe(String name, int cookTime){
         this.name = name;
         this.cookTime = cookTime;
