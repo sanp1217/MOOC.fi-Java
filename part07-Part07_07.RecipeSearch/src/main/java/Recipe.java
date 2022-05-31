@@ -33,4 +33,10 @@ public class Recipe {
     public void addIngredient(String ingredient){
         this.ingredients.add(ingredient);
     }
+    
+    public void printIngredients(){
+        for(String ing: this.ingredients){
+            System.out.println(ing);
+        }
+    }
 }
