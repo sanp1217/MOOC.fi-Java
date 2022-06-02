@@ -3,18 +3,20 @@ import java.util.ArrayList;
 public class Recipe {
     private String name;
     private int cookTime;
-    private ArrayList<String> ingredients = new ArrayList<>();
+    private ArrayList<String> ingredients;
     
     //Constructor
     public Recipe(){
         this.name = "No name";
         this.cookTime = 0;
+        this.ingredients = new ArrayList<>();
     }
     
     //Overloaded
     public Recipe(String name, int cookTime){
         this.name = name;
         this.cookTime = cookTime;
+        this.ingredients = new ArrayList<>();
     }
     
     public String getName(){
