@@ -48,4 +48,9 @@ public class Recipe {
             System.out.println(ing);
         }
     }
+    
+    @Override
+    public String toString(){
+        return this.name + ", cooking time: " + this.cookTime;
+    }
 }
