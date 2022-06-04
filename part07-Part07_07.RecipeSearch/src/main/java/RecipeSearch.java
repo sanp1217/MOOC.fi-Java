@@ -8,11 +8,15 @@ public class RecipeSearch {
     public static void main(String[] args) {
         ArrayList<Recipe> recipes = new ArrayList<>();
         ArrayList<String> linesFromFile = new ArrayList<>();
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("File to read: ");
+        String file = scanner.nextLine();
         
         //Getting recipes from the file and inserting them into a list.
-        try (Scanner scanner = new Scanner(Paths.get("recipes.txt"))){
-            while(scanner.hasNextLine()){
-                String fileLine = scanner.nextLine();
+        try (Scanner fileScanner = new Scanner(Paths.get(file))){
+            while(fileScanner.hasNextLine()){
+                String fileLine = fileScanner.nextLine();
                 if(!fileLine.isEmpty()){
                     linesFromFile.add(fileLine);
                 }else{
@@ -28,8 +32,7 @@ public class RecipeSearch {
         }
         //End of getting recipes from list.
         
-        Scanner UIScanner = new Scanner(System.in);
-        UserInterface UI = new UserInterface(recipes, UIScanner);
+        UserInterface UI = new UserInterface(recipes, scanner);
         UI.start();
         
     }
