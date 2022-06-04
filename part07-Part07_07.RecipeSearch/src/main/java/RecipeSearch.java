@@ -9,7 +9,7 @@ public class RecipeSearch {
         ArrayList<Recipe> recipes = new ArrayList<>();
         ArrayList<String> linesFromFile = new ArrayList<>();
         
-        //
+        //Getting recipes from the file and inserting them into a list.
         try (Scanner scanner = new Scanner(Paths.get("recipes.txt"))){
             while(scanner.hasNextLine()){
                 String fileLine = scanner.nextLine();
@@ -26,6 +26,12 @@ public class RecipeSearch {
         } catch(Exception e){
             System.out.println("Error: " + e.getMessage() + e.getStackTrace());
         }
+        //End of getting recipes from list.
+        
+        Scanner UIScanner = new Scanner(System.in);
+        UserInterface UI = new UserInterface(recipes, UIScanner);
+        UI.start();
+        
     }
     
     //To assign the name, cooking time, and ingredients to a recipe.

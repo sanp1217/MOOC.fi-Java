@@ -11,5 +11,19 @@ public class UserInterface {
         this.scanner = scanner;
     }
     
+    public void start(){
+        System.out.println("Commands: " + "\nlist - lists the recipes" + "\nstop - stops the program");
+        
+        while(true){
+            System.out.print("\nEnter command: ");
+            String command = this.scanner.nextLine();
+            
+            if(command.equals("stop")){
+                return;
+            }else if(command.equals("list")){
+                //Method for listing recipes.
+            }
+        }
+    }
     
 }
