@@ -21,8 +21,14 @@ public class UserInterface {
             if(command.equals("stop")){
                 return;
             }else if(command.equals("list")){
-                //Method for listing recipes.
+                listRecipes(this.recipes);
             }
+        }
+    }
+    
+    private void listRecipes(ArrayList<Recipe> recipes){
+        for(int i = 0; i < recipes.size(); i++){
+            System.out.println(recipes.get(i).toString());
         }
     }
     
