@@ -32,4 +32,14 @@ public class UserInterface {
         }
     }
     
+    private int linearSearch(ArrayList<Recipe> recipes, String searchedName){
+        int index = -1;
+        for(int i = 0; i < recipes.size(); i++){
+            if(recipes.get(i).getName().contains(searchedName)){
+                index = i;
+            }
+        }
+        return index;
+    }
+    
 }
