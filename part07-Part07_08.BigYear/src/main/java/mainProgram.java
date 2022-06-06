@@ -15,6 +15,8 @@ public class mainProgram {
                 return;
             }else if(command.equals("Add")){
                 addBird(birds, scan);
+            }else if(command.equals("All")){
+                printBirds(birds);
             }
         }
     }
@@ -28,5 +30,11 @@ public class mainProgram {
         latinName = scan.nextLine();
         
         birds.add(new Bird(name, latinName, 0));
+    }
+    
+    public static void printBirds(ArrayList<Bird> birds){
+        for(Bird bird: birds){
+            System.out.println(bird.toString());
+        }
     }
 }
