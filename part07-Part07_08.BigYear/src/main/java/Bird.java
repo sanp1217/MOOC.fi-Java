@@ -31,4 +31,8 @@ public class Bird {
     public int getObservations(){
         return this.countObserved;
     }
+    
+    public String toString(){
+        return this.name + " (" + this.latinName + "): " + this.countObserved + " observations"; 
+    }
 }
