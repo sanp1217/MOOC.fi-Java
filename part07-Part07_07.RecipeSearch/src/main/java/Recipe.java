@@ -48,6 +48,10 @@ public class Recipe {
             System.out.println(ing);
         }
     }
+    
+    public int getIngredientsSize(){
+        return this.ingredients.size();
+    }
         
     @Override
     public String toString(){
