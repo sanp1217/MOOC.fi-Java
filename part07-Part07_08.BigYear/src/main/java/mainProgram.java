@@ -17,6 +17,10 @@ public class mainProgram {
                 addBird(birds, scan);
             }else if(command.equals("All")){
                 printBirds(birds);
+            }else if(command.equals("Observation")){
+                System.out.print("Bird? ");
+                String bird = scan.nextLine();
+                addObservation(birds, bird);
             }
         }
     }
@@ -36,5 +40,15 @@ public class mainProgram {
         for(Bird bird: birds){
             System.out.println(bird.toString());
         }
+    }
+    
+    public static void addObservation(ArrayList<Bird> birds, String name){
+        for(int i = 0; i < birds.size(); i++){
+            if(birds.get(i).getName().equals(name)){
+                birds.get(i).addObservation();
+                return;
+            }
+        }
+        System.out.println("Not a bird!");
     }
 }
