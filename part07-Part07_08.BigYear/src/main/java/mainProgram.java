@@ -21,6 +21,10 @@ public class mainProgram {
                 System.out.print("Bird? ");
                 String bird = scan.nextLine();
                 addObservation(birds, bird);
+            }else if(command.equals("One")){
+                System.out.print("Bird? ");
+                String birdSearch = scan.nextLine();
+                oneBirdSearch(birds, birdSearch);
             }
         }
     }
@@ -46,6 +50,16 @@ public class mainProgram {
         for(int i = 0; i < birds.size(); i++){
             if(birds.get(i).getName().equals(name)){
                 birds.get(i).addObservation();
+                return;
+            }
+        }
+        System.out.println("Not a bird!");
+    }
+    
+    public static void oneBirdSearch(ArrayList<Bird> birds, String name){
+        for(int i = 0; i < birds.size(); i++){
+            if(birds.get(i).getName().equals(name)){
+                System.out.println(birds.get(i).toString());
                 return;
             }
         }
